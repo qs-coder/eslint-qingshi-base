@@ -4,10 +4,7 @@
   "description": "base of eslint config",
   "author": "qs-coder<chenpenglei000@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/qs-coder/eslint-qingshi-base.git"
-  },
+  "repository": "qs-coder/eslint-qingshi-base",
   "keywords": [
     "eslint",
     "js",
@@ -17,7 +14,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --config=index.js"
+    "lint": "eslint . --config=index.js",
+    "release": "qingshi-release",
+    "publish": "qingshi-publish"
   },
   "peerDependencies": {
     "eslint": ">=7.54.0",
@@ -40,6 +39,7 @@
     "eslint-plugin-yml": "^1.2.0",
     "markdown-eslint-parser": "^1.2.1",
     "prettier": "^2.7.1",
+    "qingshi-release": "^1.0.1",
     "yaml-eslint-parser": "^1.1.0"
   }
 }
