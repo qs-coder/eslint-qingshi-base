@@ -9,5 +9,5 @@ module.exports = {
   'no-restricted-imports': 'off',
   'no-undef': 'off',
   'no-unused-expressions': 'off',
-  'no-unused-vars': 'off'
+  'no-unused-vars': 'off',
 }

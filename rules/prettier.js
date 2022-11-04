@@ -6,7 +6,7 @@ module.exports = {
   singleQuote: true, // use single quote
   quoteProps: 'as-needed', // use quote for the property of object as needed
   jsxSingleQuote: false, // don't use single quote in Jsx
-  trailingComma: 'none', // have comma after the lines
+  trailingComma: 'all', // have comma after the lines
   bracketSpacing: true, // keep spacing between of {}
   bracketSameLine: false,
   rangeStart: 0,
@@ -18,5 +18,5 @@ module.exports = {
   vueIndentScriptAndStyle: false, // don't use indent for vue script and style template
   endOfLine: 'lf', //   lf
   embeddedLanguageFormatting: 'auto',
-  singleAttributePerLine: false
+  singleAttributePerLine: false,
 }

@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['./rule.js', './prettier.js']
+  extends: ['./rule.js', './prettier.js'],
 }

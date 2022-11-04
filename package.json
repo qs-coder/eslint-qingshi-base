@@ -2,8 +2,12 @@
   "name": "eslint-qingshi-base",
   "version": "1.0.0",
   "description": "base of eslint config",
-  "author": "qs-corder<chenpenglei000@gmail.com>",
-  "license": "ISC",
+  "author": "qs-coder<chenpenglei000@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/qs-coder/eslint-qingshi-base.git"
+  },
   "keywords": [
     "eslint",
     "js",
@@ -28,6 +32,7 @@
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsonc": "^2.5.0",
+    "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-md": "^1.0.19",
     "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-prettier": "^4.2.1",

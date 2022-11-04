@@ -7,5 +7,5 @@ const prettier = require('./prettier')
 module.exports = {
   all,
   markdown,
-  prettier
+  prettier,
 }

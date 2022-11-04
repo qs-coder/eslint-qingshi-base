@@ -5,22 +5,24 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2022,
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
-    sourceType: 'module'
+    sourceType: 'module',
   },
   env: {
     browser: true,
     node: true,
     commonjs: true,
-    es2022: true
+    es2022: true,
   },
   extends: [
     './rules/all.js',
     'plugin:import/recommended',
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:md/recommended',
-    'plugin:yml/standard'
+    'plugin:yml/standard',
+    'plugin:markdown/recommended',
+    'airbnb-base',
   ],
   plugins: ['n', 'promise', 'html'],
   ignorePatterns: [
@@ -40,18 +42,18 @@ module.exports = {
     '!.github',
     '!.vitepress',
     '!.vscode',
-    '.hisotry'
+    '.hisotry',
   ],
   settings: {
     'import/resolver': {
       alias: {
         map: [
           ['~', '.'],
-          ['@', './src']
+          ['@', './src'],
         ],
-        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', 'mts', '.d.ts']
-      }
-    }
+        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', 'mts', '.d.ts'],
+      },
+    },
   },
   overrides: [
     {
@@ -59,12 +61,12 @@ module.exports = {
       parser: '@html-eslint/parser',
       rules: {
         'prettier/prettier': ['error', { parser: 'html', ...prettier }],
-        'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }]
-      }
+        'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
+      },
     },
     {
       files: ['*.json', '*.json5', '*.jsonc'],
-      parser: 'jsonc-eslint-parser'
+      parser: 'jsonc-eslint-parser',
     },
     {
       files: ['package.json'],
@@ -117,35 +119,35 @@ module.exports = {
               'husky',
               'simple-git-hooks',
               'lint-staged',
-              'eslintConfig'
-            ]
+              'eslintConfig',
+            ],
           },
           {
             pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
-            order: { type: 'asc' }
+            order: { type: 'asc' },
           },
           {
             pathPattern: '^exports.*$',
-            order: ['types', 'require', 'import']
-          }
-        ]
-      }
+            order: ['types', 'require', 'import'],
+          },
+        ],
+      },
     },
     {
       files: ['*.md'],
-      parser: 'Rules-eslint-parser',
+      parser: 'markdown-eslint-parser',
       rules: {
-        'prettier/prettier': ['error', { parser: 'markdown', ...prettier }]
-      }
+        'prettier/prettier': ['error', { parser: 'markdown', ...prettier }],
+      },
     },
     {
       files: ['*.md.js', '*.md.javascript', '*.md.json'],
-      rules: markdown
+      rules: markdown,
     },
     {
       files: ['*.yaml', '*.yml'],
-      parser: 'yaml-eslint-parser'
-    }
+      parser: 'yaml-eslint-parser',
+    },
   ],
   rules: {
     // import
@@ -160,13 +162,13 @@ module.exports = {
           'remark-preset-lint-markdown-style-guide',
           ['lint-maximum-line-length', false],
           ['remark-lint-table-pipe-alignment', false],
-          ['remark-lint-list-item-indent', 'space']
-        ]
-      }
+          ['remark-lint-list-item-indent', 'space'],
+        ],
+      },
     ],
 
     // yml
     'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
-    'yml/no-empty-document': 'off'
-  }
+    'yml/no-empty-document': 'off',
+  },
 }

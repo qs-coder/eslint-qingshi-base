@@ -625,8 +625,8 @@ module.exports = {
     'no-empty': [
       'error',
       {
-        allowEmptyCatch: true
-      }
+        allowEmptyCatch: true,
+      },
     ],
 
     /**
@@ -773,10 +773,10 @@ module.exports = {
           ['&', '|', '^', '~', '<<', '>>', '>>>'],
           ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
           ['&&', '||'],
-          ['in', 'instanceof']
+          ['in', 'instanceof'],
         ],
-        allowSamePrecedence: true
-      }
+        allowSamePrecedence: true,
+      },
     ],
 
     /**
@@ -1070,8 +1070,8 @@ module.exports = {
       'always',
       {
         ignoreConstructors: false,
-        avoidQuotes: true
-      }
+        avoidQuotes: true,
+      },
     ],
 
     /**
@@ -1227,8 +1227,8 @@ module.exports = {
       'always',
       {
         line: { markers: ['*package', '!', '/', ',', '='] },
-        block: { balanced: true, markers: ['*package', '!', ',', ':', '::', 'flow-include'], exceptions: ['*'] }
-      }
+        block: { balanced: true, markers: ['*package', '!', ',', ':', '::', 'flow-include'], exceptions: ['*'] },
+      },
     ],
 
     /**
@@ -1407,10 +1407,10 @@ module.exports = {
           'JSXClosingFragment',
           'JSXText',
           'JSXEmptyExpression',
-          'JSXSpreadChild'
+          'JSXSpreadChild',
         ],
-        offsetTernaryExpressions: true
-      }
+        offsetTernaryExpressions: true,
+      },
     ],
 
     /**
@@ -1669,6 +1669,6 @@ module.exports = {
      * @description Require or disallow spacing around the `*` in `yield*` expressions
      * @link https://eslint.org/docs/latest/rules/yield-star-spacing
      */
-    'yield-star-spacing': 'error'
-  }
+    'yield-star-spacing': 'error',
+  },
 }
